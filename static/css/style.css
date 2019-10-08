@@ -1,0 +1,52 @@
+.login-input {
+  width: 130px;
+}
+
+.form-button {
+  width: 80px;
+  height: 35px;
+}
+
+.signup-box {
+  margin: auto;
+  width: 325px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+.settings-box {
+  margin: auto;
+  width: 325px;
+}
+
+.signup-area {
+  padding: 30px;
+}
+
+.settings-area {
+  padding: 30px;
+}
+
+
+.Checkout.is-desktop .ModalContainer {
+  width: 30% !important;
+}
+
+.Checkout.is-desktop .Modal {
+  width: auto !important;
+}
+
+.navbar-item .logo  {
+  max-height: 40px;
+  width: 170px;
+}
+
+.container{
+  padding: 20px;
+  text-align: center;
+}
+
+.table-center{
+  margin: 0px auto; 
+}

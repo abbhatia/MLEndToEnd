@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold is-large">
+    <div class="container">
+
+        <div style="text-align: center; color:white; padding: 5px">
+            <h2>You have to pay <strong>$10.00</strong> to have one month of predictions!</h2>
+
+            <form action="/charge" method="post">
+                <article>
+                    <label>
+                    </label>
+                </article>
+
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_TQmy1LFbeJ6tgZLOdzT4pZRh00mJ3yq97c"
+                    data-description="Purchase One Month Of Predictions" data-name="Learning"
+                    data-image="../static/images/favicon.ico" data-amount="1000" data-email="{{ email }}"
+                    data-locale="auto"></script>
+            </form>
+        </div>
+        <img src="../static/images/predict.jpg">
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

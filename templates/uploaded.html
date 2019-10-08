@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold is-large">
+  <div class="container">
+    </head>
+
+    <body>
+
+      <h2>Results</h2>
+      <div class="table-container">
+        <table class="table  table-center">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Percent Likelihood</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{predictions[0][1]}}</td>
+              <td>{{predictions[0][2] * 100}}%</td>
+            </tr>
+            <tr>
+              <td>{{predictions[1][1]}}</td>
+              <td>{{predictions[1][2] * 100}}%</td>
+            </tr>
+            <tr>
+              <td>{{predictions[2][1]}}</td>
+              <td>{{predictions[2][2] * 100}}%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+          <a class="button" onclick="history.go(-1)">Back</a>
+      </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<!--
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script>
+    var handler = StripeCheckout.configure({
+        key: "pk_test_zpCilIV7tmrKnzoC3T5Up4GN00yeXvULaC",
+        image: '../static/images/favicon.ico',
+        locale: "auto",
+        token: function (token) {
+            console.log(token);
+        }
+    });
+
+    document.getElementById("custom-button").addEventListener("click", function (e) {
+        // Open Checkout with further options:
+        handler.open({
+            name: "Learning",
+            description: "Purchase One Month Of Predictions",
+            amount: 500
+        });
+    });
+
+    // Close Checkout on page navigation:
+    window.addEventListener("popstate", function () {
+        handler.close();
+    });
+</script>
+-->
+{% endblock %}

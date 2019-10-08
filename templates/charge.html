@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold is-large">
+    <div class="container">
+
+        <div style="text-align: center; color:black; font-weight: bold; font-size: 25px">
+            <h1 style="font-size:32px;">Congratulations!!!</h1>
+            <h2>You have earn one month of predictions!</h2>
+            <h2>Upload your image below to have a predict.</h2>
+        </div>
+
+        <div class='upload-label' style="padding-top: 10px">
+            <label id='upload-label'>No file chosen</label>
+        </div>
+        <div>
+            <img id='image-picked' class='no-display' alt='Chosen Image' height='0'>
+        </div>
+
+        <form action="/uploaded" method="POST" enctype="multipart/form-data">
+            <input id='file-input' class='no-display' type='file' name='file' accept='image/*'
+                onchange='showPicked(this)'>
+            <input type="submit" />
+        </form>
+        <div style="padding-bottom: 50px"></div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/upload.js"></script>
+{% endblock %}
